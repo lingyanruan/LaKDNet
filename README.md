@@ -17,7 +17,7 @@ the pros and cons of CNN and Transformer architectures beyond image deblurring t
 
 
 ## Effective Receptive Field Analysis
-<img src = "./assets/ERF.png"> 
+<img src = "./assets/ERF.png" width='80%' height ='80%'> 
 
 ## Will update soon!
 ## Quick Demo
