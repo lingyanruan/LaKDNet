@@ -13,7 +13,7 @@ the pros and cons of CNN and Transformer architectures beyond image deblurring t
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](placeholder) [Come soon!]
 
 ## Performance vs. Computational Cost
-<img src = "./assets/teaser.png"> 
+<img src = "./assets/teaser.png" width='60%' height ='60%'> 
 
 
 ## Effective Receptive Field Analysis
