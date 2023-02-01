@@ -1,4 +1,4 @@
-# LaKDNet: Revisiting Image Deblurring with an Efficient ConvNet
+# LaKDNet: Revisiting Image Deblurring with an Efficient ConvNet 
 
   [Lingyan Ruan](http://lyruan.com), [Mojtaba Bemana](https://people.mpi-inf.mpg.de/~mbemana/), [Hans-peter Seidel](https://people.mpi-inf.mpg.de/~hpseidel/), [Karol Myszkowski](https://people.mpi-inf.mpg.de/~karol/), [Bin Chen](https://binchen.me/) 
 
@@ -10,7 +10,7 @@ applications in computer vision. The Convolution Neural Networks (CNNs) have per
 the pros and cons of CNN and Transformer architectures beyond image deblurring tasks.* 
 <hr />
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](placeholder)
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](placeholder) [Come soon!]
 
 ## Performance vs. Computational Cost
 <img src = "./assets/teaser.png"> 
@@ -19,6 +19,7 @@ the pros and cons of CNN and Transformer architectures beyond image deblurring t
 ## Effective Receptive Field Analysis
 <img src = "./assets/ERF.png"> 
 
+## Will update soon!
 ## Quick Demo
 
 ## Instruction on the Training and Evaluation
