@@ -17,10 +17,10 @@ the pros and cons of CNN and Transformer architectures beyond image deblurring t
 
 
 ## Effective Receptive Field Analysis 
-# Defocus
+**Defocus**
 <img src = "./assets/ERF_defocus.png" width='80%' height ='80%'> 
 
-# Motion
+**Motion**
 <img src = "./assets/ERF_motion.png" width='80%' height ='80%'> 
 
 
