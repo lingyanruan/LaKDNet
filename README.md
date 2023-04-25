@@ -5,25 +5,25 @@
 
 Max-Planck-Institut fur Informatik  
 
-> **Abstract:** *Image deblurring aims to recover the latent sharp image from its blurry counterpart and has a wide range of
-applications in computer vision. The Convolution Neural Networks (CNNs) have performed well in this domain for many years, and until recently an alternative network architecture, namely Transformer, has demonstrated even stronger performance. One can attribute its superiority to the multi-head self-attention (MHSA) mechanism, which offers a larger receptive field and better input content adaptability than CNNs. However, as MHSA demands high computational costs that grow quadratically with respect to the input resolution, it becomes impractical for high-resolution image deblurring tasks. In this work, we propose a unified lightweight CNN network that features a large effective receptive field (ERF) and demonstrates comparable or even better performance than Transformers while bearing less computational costs. Our key design is an efficient CNN block dubbed LaKD, equipped with a large kernel depth-wise convolution and spatial-channel mixing structure, attaining comparable or larger ERF than Transformers but with a smaller parameter scale. Specifically, we achieve +0.17dB / +0.43dB PSNR over the state-of-theart Restormer on defocus / motion deblurring benchmark datasets with 32% fewer parameters and 39% fewer MACs. Extensive experiments demonstrate the superior performance of our network and the effectiveness of each module. Furthermore, we propose a compact and intuitive ERFMeter metric that quantitatively characterizes ERF, and shows a high correlation to the network performance. We hope this work can inspire the research community to further explore
-the pros and cons of CNN and Transformer architectures beyond image deblurring tasks.* 
+> **Abstract:** *The recent advancements in Transformers for computer vision tasks have had a notable impact on the field of image restoration. This has led to the development of generic structures, such as Uformer, and Restormer, which have shown superior performance over dedicated task-specific CNNs. The success of these structures can be attributed to their ability to handle long-range interactions, which is believed to be lacking in CNNs. The aim of this paper is to address the limitations of CNN-based structures and enable them to perform image restoration tasks such as motion and defocus deblurring with comparable effectiveness to Transformers. To investigate the factors contributing to restoration performance differences, we analyze the effective receptive field (ERF) of 10 existing methods and propose a metric called ERFMeter to compare ERF across different architectures. Our analysis reveals that the global and local properties of ERF are crucial for achieving superior performance. Based on these findings, we propose a CNN structure called LaKDNet, incorporating a large kernel convolution and mixer shortcuts scheme to enhance the global and local properties of ERF in CNNs. This approach demonstrates higher efficiency than generic Transformer works, as well as existing CNNs with multi-scale-stage strategies. Specifically, we achieve a PSNR improvement of +0.80 dB / +0.67 dB over the state-of-the-art Restormer / Uformer on the GOPRO dataset. Our findings suggest that there are still rooms to improve the performance of CNN when refining the network structure towards an optimal ERF.* 
 <hr />
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](placeholder) [Come soon!]
 
-## Performance vs. Computational Cost
-<img src = "./assets/teaser.png" width='60%' height ='60%'> 
+
 
 
 ## Effective Receptive Field Analysis 
-**Defocus**
+**Motion & Defocus**
 
-<img src = "./assets/ERF_defocus.png" width='80%' height ='80%'> 
+<img src = "./assets/ERF_demo.png" width='60%' height ='60%'> 
 
-**Motion**
+## Visual Performance
 
-<img src = "./assets/ERF_motion.png" width='80%' height ='80%'> 
+<img src = "./assets/visual_performance.png" width='80%' height ='80%'> 
+
+## Performance vs. Computational Cost
+<img src = "./assets/assets_params.png" width='80%' height ='80%'> 
 
 
 ## Will update soon!
