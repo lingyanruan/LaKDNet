@@ -10,7 +10,7 @@ Max-Planck-Institut fur Informatik
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2302.02234) [Come soon!]
 
-## Notes: Code and Weight will be announced in few weeks. We have the updated version, will be announced soon.
+## Notes: Code and Weight will be announced in few weeks. We have the updated version regarding the performance and its ERF analysis. Thanks for your Interest.
 
 
 ## Effective Receptive Field Analysis 
