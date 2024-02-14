@@ -5,8 +5,6 @@ import numbers
 from einops import rearrange
 
 ##########################################################################
-## Layer Norm
-
 def to_3d(x):
     return rearrange(x, 'b c h w -> b (h w) c')
 
@@ -61,8 +59,7 @@ class LayerNorm(nn.Module):
         return to_4d(self.body(to_3d(x)), h, w)
 
 
-##########################################################################
-## Feed-Forward Network 
+####################################################
 class FeedForward(nn.Module):
     def __init__(self, dim, ffn_expansion_factor, bias):
         super(FeedForward, self).__init__()
@@ -83,7 +80,7 @@ class FeedForward(nn.Module):
         return x
 
 
-## Change to ConvMixer Layer  ###########################
+#############################
 class Mixerlayer(nn.Module):
     def __init__(self, dim, mix_kernel_size, bias):
         super(Mixerlayer, self).__init__()
@@ -126,7 +123,6 @@ class Mixerblock(nn.Module):
         return x
   
 ##########################################################################
-## Resizing modules
 class Downsample(nn.Module):
     def __init__(self, n_feat):
         super(Downsample, self).__init__()
@@ -148,7 +144,6 @@ class Upsample(nn.Module):
         return self.body(x)
 
 ##########################################################################
-##---------- Restormer -----------------------
 class LaKDNet(nn.Module):
     def __init__(self, 
         inp_channels=3, 
@@ -188,7 +183,7 @@ class LaKDNet(nn.Module):
         self.up2_1 = Upsample(int(dim*2**1))  
         self.decoder_level1 = nn.Sequential(*[Mixerblock(dim=int(dim*2**1), mix_kernel_size=mix_kernel_size[0], ffn_expansion_factor=ffn_expansion_factor, bias=bias, LayerNorm_type=LayerNorm_type) for i in range(num_blocks[0])])
         
-        #### For Dual-Pixel Defocus Deblurring Task ####           
+                  
         self.output = nn.Conv2d(int(dim*2**1), out_channels, kernel_size=3, stride=1, padding=1, bias=bias)
         self.dual_pixel_task = dual_pixel_task
 
@@ -221,11 +216,10 @@ class LaKDNet(nn.Module):
         inp_dec_level1 = torch.cat([inp_dec_level1, out_enc_level1], 1)
         out_dec_level1 = self.decoder_level1(inp_dec_level1)
 
-        #### For Dual-Pixel Defocus Deblurring Task ####
+        
         if self.dual_pixel_task:
             out_dec_level1 = self.output(out_dec_level1) + inp_img[:,-3:,:,:]
-            
-        ###########################
+
         else:
             out_dec_level1 = self.output(out_dec_level1) + inp_img
 
