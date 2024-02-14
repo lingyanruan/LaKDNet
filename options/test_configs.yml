@@ -1,0 +1,103 @@
+Defocus:
+
+  test_status: ['train_on_dpdd_s','train_on_lfdof_s','train_on_lfdpdd_s','train_on_dpdd_dual_s','train_on_dpdd_l','train_on_dpdd_dual_l']
+  eval_data: [['DPDD','RealDOF'],'LFDOF',['DPDD','RealDOF'],['DPDD'],['DPDD'],['DPDD']]
+  net_configs: ['network_s','network_s','network_s','network_s_dual','network_l','network_l_dual']
+
+  DPDD:
+    dataroot_gt: ./Test_sets/DPDD/
+    dataroot_lq: ./Test_sets/DPDD/
+
+  RealDOF:
+    dataroot_gt: ./Test_sets/REALDOF/
+    dataroot_lq: ./Test_sets/REALDOF/
+
+  LFDOF:
+    dataroot_lq: ./Test_sets/LFDOF/
+    dataroot_gt: ./Test_sets/LFDOF/
+
+  network_s:
+    inp_channels: 3
+    out_channels: 3
+    dim: 32
+    num_blocks: [8, 12, 12, 16]
+    mix_kernel_size: [9, 9, 9, 9]
+    
+  network_l:
+    inp_channels: 3
+    out_channels: 3
+    dim: 48
+    num_blocks: [8, 12, 12, 16]
+    mix_kernel_size: [9, 9, 9, 9]
+    
+
+  network_s_dual:
+    inp_channels: 9
+    out_channels: 3
+    dim: 32
+    num_blocks: [8, 12, 12, 16]
+    mix_kernel_size: [9, 9, 9, 9]  
+    dual_pixel_task: True
+    
+  network_l_dual:
+    inp_channels: 9
+    out_channels: 3
+    dim: 48
+    num_blocks: [8, 12, 12, 16]
+    mix_kernel_size: [9, 9, 9, 9]
+    dual_pixel_task: True
+
+  weight:
+    train_on_dpdd_s: ./ckpts/Defocus/train_on_dpdd_s/train_on_dpdd_s.pth
+    train_on_lfdof_s: ./ckpts/Defocus/train_on_lfdof_s/train_on_lfdof_s.pth
+    train_on_lfdpdd_s: ./ckpts/Defocus/train_on_lfdpdd_s/train_on_lfdpdd_s.pth
+    train_on_dpdd_dual_s: ./ckpts/Defocus/train_on_dpdd_dual_s/train_on_dpdd_dual_s.pth
+    train_on_dpdd_l: ./ckpts/Defocus/train_on_dpdd_l/train_on_dpdd_l.pth
+    train_on_dpdd_dual_l: ./ckpts/Defocus/train_on_dpdd_dual_l/train_on_dpdd_dual_l.pth
+
+Motion:
+
+  test_status: ['train_on_gopro_s','train_on_realj_s','train_on_realr_s','train_on_gopro_l','train_on_realj_l','train_on_realr_l']
+  eval_data: [['GOPRO','HIDE','REALJ','REALR'],'REALJ','REALR',['GOPRO','HIDE','REALJ','REALR'],'REALJ','REALR']
+  net_configs: ['network_s','network_s','network_s','network_l','network_l','network_l']
+
+  GOPRO:
+    dataroot_gt: ./Test_sets/GOPRO/
+    dataroot_lq: ./Test_sets/GOPRO/
+
+  HIDE:
+    dataroot_gt: ./Test_sets/HIDE/
+    dataroot_lq: ./Test_sets/HIDE/
+
+  REALJ:
+    dataroot_gt: ./Test_sets/REALJ/
+    dataroot_lq: ./Test_sets/REALJ/
+
+  REALR:
+    dataroot_gt: ./Test_sets/REALR/
+    dataroot_lq: ./Test_sets/REALR/
+
+  network_s:
+    inp_channels: 3
+    out_channels: 3
+    dim: 32
+    num_blocks: [8, 12, 12, 16]
+    mix_kernel_size: [7, 7, 7, 7]
+    
+  network_l:
+    inp_channels: 3
+    out_channels: 3
+    dim: 48
+    num_blocks: [8, 12, 12, 16]
+    mix_kernel_size: [7, 7, 7, 7]
+
+  weight:
+    train_on_gopro_s: ./ckpts/Motion/train_on_gopro_s/train_on_gopro_s.pth
+    train_on_realj_s: ./ckpts/Motion/train_on_realj_s/train_on_realj_s.pth
+    train_on_realr_s: ./ckpts/Motion/train_on_realr_s/train_on_realr_s.pth
+    train_on_gopro_l: ./ckpts/Motion/train_on_gopro_l/train_on_gopro_l.pth
+    train_on_realj_l: ./ckpts/Motion/train_on_realj_l/train_on_realj_l.pth
+    train_on_realr_l: ./ckpts/Motion/train_on_realr_l/train_on_realr_l.pth
+  
+    
+
