@@ -46,29 +46,31 @@ Max-Planck-Institut fur Informatik
 ## Visual Result and Pre-trained Models
 Please download the weights and visual result in this [webpage](https://lakdnet.mpi-inf.mpg.de/)
 
-| Task | Trained Dataset | Evaluated Dataset |PSNR | SSIM | #params | 
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| Motion | GoPro | GoPro | 33.35 | 0.964  |17.1M |  
-| - | - | GoPro | 33.72  | 0.967 | 37.5M | 
-| - | -| HIDE  | 31.21 | 0.943 | 17.1M | 
-| - | -| HIDE  | 31.58 | 0.946  | 37.5M  | 
-| - | -| RealBlur-R  | 35.91 | 0.954  | 17.1M  | 
-| - | -| RealBlur-R | 36.08 | 0.955 | 37.5M | 
-| - | -| RealBlur-J  | 28.78 | 0.878  | 17.1M | 
-| - | -| RealBlur-J | 28.59 | 0.870  | 37.5M | 
-| - | RealBlur-R| RealBlur-R  | 39.91 | 0.974  | 17.1M  | 
-| - | RealBlur-R| RealBlur-R | 40.25 | 0.975 | 37.5M | 
-| - | RealBlur-J | RealBlur-J  | 32.33 | 0.929  | 17.1M | 
-| - | RealBlur-J | RealBlur-J | 32.68 | 0.932  | 37.5M | 
-| Defocus-single | DPDD | DPDD | 26.15 | 0.810  | 17.7M | 
-| - | DPDD | DPDD | 26.25 | 0.813  | 38.4M | 
-| - | DPDD | RealDOF |25.08 | 0.762  | 17.7M | 
-| - | DPDD | RealDOF |25.13 | 0.765  | 38.4M | 
-| - | LFDOF | LFDOF |31.87 | 0.912  | 17.7M | 
-| - | LFDOF & DPDD | DPDD |25.89 | 0.792  | 17.7M | 
-| - | LFDOF & DPDD | RealDOF |25.83 | 0.769  | 17.7M |
-| Defocus-dual | DPDD | DPDD | 26.72 | 0.83  | 17.7M | 
-| - | DPDD | DPDD |26.89 | 0.83  | 38.4M | 
+
+| Task            | Trained Dataset | Evaluated Dataset | PSNR  | SSIM  | #params |
+|-----------------|-----------------|-------------------|-------|-------|---------|
+| **Motion**      | GoPro           | GoPro             | 33.35 | 0.964 | 17.1M   |
+|  **Motion**     |      GoPro            | GoPro             | 33.72 | 0.967 | 37.5M   |
+|   **Motion**    |        GoPro          | HIDE              | 31.21 | 0.943 | 17.1M   |
+|   **Motion**    |      GoPro            | HIDE              | 31.58 | 0.946 | 37.5M   |
+|   **Motion**    |     GoPro             | RealBlur-R        | 35.91 | 0.954 | 17.1M   |
+|   **Motion**    |    GoPro              | RealBlur-R        | 36.08 | 0.955 | 37.5M   |
+|   **Motion**    |    GoPro              | RealBlur-J        | 28.78 | 0.878 | 17.1M   |
+|    **Motion**   |    GoPro              | RealBlur-J        | 28.59 | 0.870 | 37.5M   |
+|   **Motion**    | RealBlur-R      | RealBlur-R        | 39.91 | 0.974 | 17.1M   |
+|   **Motion**    | RealBlur-R      | RealBlur-R        | 40.25 | 0.975 | 37.5M   |
+|   **Motion**    | RealBlur-J      | RealBlur-J        | 32.33 | 0.929 | 17.1M   |
+|   **Motion**    | RealBlur-J      | RealBlur-J        | 32.68 | 0.932 | 37.5M   |
+| **Defocus-single** | DPDD         | DPDD               | 26.15 | 0.810 | 17.7M   |
+|  **Defocus-single** | DPDD            | DPDD               | 26.25 | 0.813 | 38.4M   |
+|  **Defocus-single**  | DPDD            | RealDOF            | 25.08 | 0.762 | 17.7M   |
+| **Defocus-single**   | DPDD            | RealDOF            | 25.13 | 0.765 | 38.4M   |
+| **Defocus-single**   | LFDOF           | LFDOF              | 31.87 | 0.912 | 17.7M   |
+|  **Defocus-single**  | LFDOF & DPDD    | DPDD               | 25.89 | 0.792 | 17.7M   |
+|  **Defocus-single**  | LFDOF & DPDD    | RealDOF            | 25.83 | 0.769 | 17.7M   |
+| **Defocus-dual**   | DPDD         | DPDD               | 26.72 | 0.830 | 17.7M   |
+|   **Defocus-dual** | DPDD            | DPDD               | 26.89 | 0.830 | 38.4M   |
+
 
 note: we increase the channel dimension from 32 to 48 to get the large version.
 
@@ -109,8 +111,10 @@ Download and unzip under `./ckpts/` from [webpage](https://lakdnet.mpi-inf.mpg.d
 
 Download and unzip under `./Test_sets/` from [webpage](https://lakdnet.mpi-inf.mpg.de/):
 
-The original full datasets could be found here: ([LFDOF](https://sweb.cityu.edu.hk/miullam/AIFNET/), [DPDD](https://github.com/Abdullah-Abuolaim/defocus-deblurring-dual-pixel), [CUHK](http://www.cse.cuhk.edu.hk/~leojia/projects/dblurdetect/dataset.html) and [RealDOF](https://www.dropbox.com/s/arox1aixvg67fw5/RealDOF.zip?dl=1)):
+The original full defocus datasets could be found here: ([LFDOF](https://sweb.cityu.edu.hk/miullam/AIFNET/), [DPDD](https://github.com/Abdullah-Abuolaim/defocus-deblurring-dual-pixel), [CUHK](http://www.cse.cuhk.edu.hk/~leojia/projects/dblurdetect/dataset.html) and [RealDOF](https://www.dropbox.com/s/arox1aixvg67fw5/RealDOF.zip?dl=1)):
 
+
+The original full motion datasets could be found here: ([GOPRO](https://seungjunnah.github.io/Datasets/gopro), [HIDE](https://github.com/joanshen0508/HA_deblur?tab=readme-ov-file), [REALR&REALJ](http://cg.postech.ac.kr/research/realblur/)).
 #### 5. Command Line
 
 ```bash
