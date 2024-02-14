@@ -127,7 +127,7 @@ $ python run.py --type Defocus
 
 Should you have any questions, please open an issue or contact me [lyruanruan@gmail.com](mailto:lyruanruan@gmail.com)
 
-Acknowledgment: Thanks for all the fabulous works included in our comparsions.
+Acknowledgment: Thanks for all the fabulous works included in our comparsions, e.g. Restormer, Uformer, NAFNet.
 
 ## License
 
