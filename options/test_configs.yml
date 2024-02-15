@@ -1,7 +1,7 @@
 Defocus:
 
   test_status: ['train_on_dpdd_s','train_on_lfdof_s','train_on_lfdpdd_s','train_on_dpdd_dual_s','train_on_dpdd_l','train_on_dpdd_dual_l']
-  eval_data: [['DPDD','RealDOF'],'LFDOF',['DPDD','RealDOF'],['DPDD'],['DPDD',,'RealDOF'],['DPDD']]
+  eval_data: [['DPDD','RealDOF'],'LFDOF',['DPDD','RealDOF'],['DPDD'],['DPDD','RealDOF'],['DPDD']]
   net_configs: ['network_s','network_s','network_s','network_s_dual','network_l','network_l_dual']
 
   DPDD:
