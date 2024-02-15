@@ -53,7 +53,7 @@ Please download the weights and visual result in this [webpage](https://lakdnet.
 |  **Motion**     |      GoPro            | GoPro             | 33.72 | 0.967 | 37.5M   |
 |   **Motion**    |        GoPro          | HIDE              | 31.21 | 0.943 | 17.1M   |
 |   **Motion**    |      GoPro            | HIDE              | 31.58 | 0.946 | 37.5M   |
-|   **Motion**    |     GoPro             | RealBlur-R        | 35.91 | 0.954 | 17.1M   |
+|   **Motion**    |     GoPro             | RealBlur-R        | 35.90 | 0.954 | 17.1M   |
 |   **Motion**    |    GoPro              | RealBlur-R        | 36.08 | 0.955 | 37.5M   |
 |   **Motion**    |    GoPro              | RealBlur-J        | 28.78 | 0.878 | 17.1M   |
 |    **Motion**   |    GoPro              | RealBlur-J        | 28.59 | 0.870 | 37.5M   |
@@ -68,9 +68,8 @@ Please download the weights and visual result in this [webpage](https://lakdnet.
 | **Defocus-single**   | LFDOF           | LFDOF              | 31.87 | 0.912 | 17.7M   |
 |  **Defocus-single**  | LFDOF & DPDD    | DPDD               | 25.89 | 0.792 | 17.7M   |
 |  **Defocus-single**  | LFDOF & DPDD    | RealDOF            | 25.83 | 0.769 | 17.7M   |
-| **Defocus-dual**   | DPDD         | DPDD               | 26.72 | 0.830 | 17.7M   |
-|   **Defocus-dual** | DPDD            | DPDD               | 26.89 | 0.830 | 38.4M   |
-
+| **Defocus-dual**   | DPDD         | DPDD               | 26.72 | 0.826 | 17.7M   |
+|   **Defocus-dual** | DPDD            | DPDD               | 26.89 | 0.832 | 38.4M   |
 
 note: we increase the channel dimension from 32 to 48 to get the large version.
 
